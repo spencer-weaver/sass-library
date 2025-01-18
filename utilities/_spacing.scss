@@ -1,0 +1,76 @@
+// Apple-recommended spacing (4pt grid system)
+
+// spacing scale
+$spacing-xxs: 4px;
+$spacing-xs: 8px;
+$spacing-s: 12px;
+$spacing-m: 16px;
+$spacing-l: 20px;
+$spacing-xl: 24px;
+$spacing-xxl: 32px;
+
+/* margin */
+
+@mixin margin($spacing) {
+    margin: $spacing;
+}
+
+.margin {
+    @include margin($spacing-m);
+}
+
+.margin-l {
+    @include margin($spacing-l);
+}
+
+.margin-xl {
+    @include margin($spacing-xl);
+}
+
+.margin-xxl {
+    @include margin($spacing-xxl);
+}
+
+/* margin-lr */
+
+@mixin margin-lr($spacing) {
+    margin: 0 $spacing;
+}
+
+.margin-lr {
+    @include margin-lr($spacing-m);
+}
+
+.margin-lr-l {
+    @include margin-lr($spacing-l);
+}
+
+.margin-lr-xl {
+    @include margin-lr($spacing-xl);
+}
+
+.margin-lr-xxl {
+    @include margin-lr($spacing-xxl);
+}
+
+/* margin-tb */
+
+@mixin margin-tb($spacing) {
+    margin: $spacing 0;
+}
+
+.margin-tb {
+    @include margin-tb($spacing-m);
+}
+
+.margin-tb-l {
+    @include margin-tb($spacing-l);
+}
+
+.margin-tb-xl {
+    @include margin-tb($spacing-xl);
+}
+
+.margin-tb-xxl {
+    @include margin-tb($spacing-xxl);
+}

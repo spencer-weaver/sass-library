@@ -1,0 +1,8 @@
+
+@mixin transition-scale($duration) {
+    transition: scale $duration;
+}
+
+.transition-scale {
+    @include transition-scale(100ms)
+}
