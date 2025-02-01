@@ -20,3 +20,165 @@
 @import "effects/transition";
 
 // custom
+
+body {
+
+    position: relative;
+    overflow-y: hidden;
+    background-color: #101010;
+    color: $text-color-dark;
+    height: 100dvh;
+}
+
+.control-panel {
+
+    z-index: 1;
+
+    border: 1px solid #666666;
+    background-color: #111111;
+    padding: $spacing-m;
+    border-radius: 48px;
+    margin: $spacing-xxl;
+    height: calc(100% - 2 * $spacing-xxl);
+
+    display: grid;
+    grid-template-rows: repeat(9, 1fr);
+    grid-template-columns: repeat(12, 1fr);
+
+    .event-manager {
+
+        grid-column-start: 2;
+        grid-column-end: 12;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        #event-select {
+            
+            height: 36px;
+            width: 100%;
+            border-radius: 36px;
+            border: none;
+            margin-right: 36px;
+            text-align: center;
+            background-color: #444;
+            border: 1px solid #888;
+            color: #999;
+            font-size: 1.5rem;
+        }
+
+        #new-event {
+
+            border: 1px solid #888;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            background-color: #444;
+        }
+
+    }
+
+    .info {
+        
+        grid-column-start: 2;
+        grid-column-end: 9;
+        grid-row-start: 3;
+        grid-row-end: 9;
+
+        border-radius: 36px;
+        background-color: #444;
+    }
+}
+
+#event-popup {
+
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::after {
+
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(24, 50, 50, 60%);
+        filter: blur(40px);
+        z-index: 2;
+    }
+
+    form {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 4;
+        background-color: #111;
+        border: 1px solid #888;
+        width: 60%;
+        height: 70%;
+        border-radius: 36px;
+        font-size: 1.5rem;
+        color: #999;
+
+        & > * {
+
+            width: 60%;
+            margin: 0;
+        }
+
+        h2 {
+
+            margin-top: 2rem;
+            font-size: 1.6rem;
+        }
+
+        label {
+
+            height: 1.8rem;
+            margin-bottom: 4px;
+            margin-top: 8px;
+        }
+
+        input {
+
+            line-height: 1.8rem;
+            font-size: 1.5rem;
+            border: 1px solid #888;
+            background-color: #444;
+            color: #999;
+        }
+
+        select {
+
+            height: 2rem;
+            font-size: 1.2rem;
+            border: 1px solid #888;
+            background-color: #444;
+            color: #999;
+            text-align: center;
+        }
+
+        button {
+
+            margin-top: 12px;
+            height: 2rem;
+            font-size: 1.2rem;
+            border: 1px solid #888;
+            background-color: #444;
+            color: #999;
+        }
+    }
+}
